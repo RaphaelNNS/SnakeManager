@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SnakeManager</string>
+
+    <!--MainActivity-->
+    <string name="button_main_1">Snakes</string>
+    <string name="button_main_2">insert</string>
+    <string name="button_main_3">analyze</string>
+
+
+
+    <!--InsertActivity-->
+    <string name="input_insert_1">name</string>
+    <string name="input_insert_2">length</string>
+    <string name="input_insert_3">color</string>
+
+    <string name="button_insert_1">insert</string>
+
+
+
+
+
+</resources>
