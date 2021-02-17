@@ -47,8 +47,6 @@ class InsertActivity : AppCompatActivity() {
                 //callback
                 callbacktxt.text = "nome inserido"
                 callbacktxt.setTextColor(Color.parseColor("#FFBB86FC"))
-
-
             }
         }
     }

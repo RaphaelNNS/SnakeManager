@@ -86,6 +86,6 @@ class DatabaseHandler (context: Context): SQLiteOpenHelper(context, DB_NAME,null
         private val DB_NAME = "SnakeApp"
         private val TABLE_NAME = "Snakes"
         private val ID = "Id"
-        private val NAME = "Nome"
+        private val NAME = "Name"
     }
 }
