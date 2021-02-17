@@ -13,6 +13,12 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
+        //Hide action bar
+        supportActionBar?.hide()
+
+
+
+
         var databaseHandler = DatabaseHandler(this)
         var list = findViewById<TextView>(R.id.list_list_activity)
 

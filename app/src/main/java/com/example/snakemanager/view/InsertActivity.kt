@@ -16,6 +16,10 @@ class InsertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insert)
 
+        //Hide action bar
+        supportActionBar?.hide()
+
+
         val databaseHandler = DatabaseHandler(this)
 
         val name_input = findViewById<EditText>(R.id.input_insert_1)
