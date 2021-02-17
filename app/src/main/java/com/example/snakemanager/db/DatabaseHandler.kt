@@ -9,7 +9,11 @@ import com.example.snakemanager.model.Snake
 class DatabaseHandler (context: Context): SQLiteOpenHelper(context, DB_NAME,null, DB_VERSION) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val CREATE_TABLE = "CREATE TABLE $TABLE_NAME ($ID INTEGER PRIMARY KEY, $NAME TEXT);"
+        val CREATE_TABLE = "CREATE TABLE $TABLE_NAME ("+
+                " $ID INTEGER PRIMARY KEY," +
+                " $NAME TEXT," +
+                " $LENGTH INTEGER," +
+                " $COLOR TEXT);"
         db?.execSQL(CREATE_TABLE)
     }
 
@@ -23,6 +27,9 @@ class DatabaseHandler (context: Context): SQLiteOpenHelper(context, DB_NAME,null
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(NAME, snake.name)
+        values.put(LENGTH, snake.lenght)
+        values.put(COLOR, snake.color)
+
         val _success = db.insert(TABLE_NAME,null,values)
         return (("$_success").toInt() != -1)
     }
@@ -50,6 +57,8 @@ class DatabaseHandler (context: Context): SQLiteOpenHelper(context, DB_NAME,null
                     val snake = Snake()
                     snake.id = cursor.getInt(cursor.getColumnIndex(ID))
                     snake.name = cursor.getString(cursor.getColumnIndex(NAME))
+                    snake.lenght = cursor.getInt(cursor.getColumnIndex(LENGTH))
+                    snake.color = cursor.getString(cursor.getColumnIndex(COLOR))
                     snakeList.add(snake)
                 }while(cursor.moveToNext())
             }
@@ -87,5 +96,7 @@ class DatabaseHandler (context: Context): SQLiteOpenHelper(context, DB_NAME,null
         private val TABLE_NAME = "Snakes"
         private val ID = "Id"
         private val NAME = "Name"
+        private val LENGTH = "Length"
+        private val COLOR = "Color"
     }
 }

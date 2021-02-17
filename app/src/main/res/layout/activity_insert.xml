@@ -19,6 +19,7 @@
         <EditText
             android:id="@+id/input_insert_1"
             android:hint="@string/input_insert_1"
+            android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
@@ -28,6 +29,7 @@
         <EditText
             android:id="@+id/input_insert_2"
             android:hint="@string/input_insert_2"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
@@ -36,6 +38,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
         <EditText
             android:id="@+id/input_insert_3"
+            android:inputType="textPersonName"
             android:hint="@string/input_insert_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
